@@ -4,14 +4,24 @@ int factorial(int n) {
     int i = 1;
     while (n > 1) {
         i = i * n;
-        n = n - 1;  // Corregido: Eliminada la declaracion 'int', ahora se decrementa 'n' directamente
+        n = n - 1;
     }
     return i;
 }
 
-int main(int argc, char *argv[]) {
-    int fac4 = factorial(4);
-    int fac5 = factorial(5);
-    printf("4! = %d, 5! = %d\n", fac4, fac5);
+int main() {
+    int num, result;
+
+    // Se pide al usuario que ingrese un numero
+    printf("Ingrese un numero para calcular su factorial: ");
+    scanf("%d", &num);  // Se lee el numero introducido y se almacena en 'num'
+
+    // Se calcula el factorial del numero ingresado
+    result = factorial(num);
+
+    // Se imprime el resultado
+    printf("%d! = %d\n", num, result);
+
     return 0;
 }
+
